@@ -1,10 +1,9 @@
+
 services:
   api:
     build: .
     ports:
       - "4000:4000"
-    volumes:
-      - .:/usr/src/app
     env_file:
       - .env.example
     depends_on:

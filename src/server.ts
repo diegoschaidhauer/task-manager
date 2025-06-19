@@ -9,6 +9,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+/**
+ * Inicia o servidor Express com Apollo Server (GraphQL).
+ * Configura middlewares, schema e autenticação via JWT.
+ */
 export const startServer = async () => {
   const app = express();
   app.use(cors());

@@ -1,3 +1,6 @@
+/**
+ * Definição dos tipos GraphQL (typeDefs) que compõem o schema da aplicação.
+ */
 export const typeDefs = `#graphql
   type User {
     id: ID!

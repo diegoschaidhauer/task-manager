@@ -1,5 +1,9 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
+/**
+ * Interface que define a estrutura de uma tarefa.
+ * @interface ITask
+ */
 export interface ITask extends Document {
   title: string;
   description?: string;
@@ -10,6 +14,9 @@ export interface ITask extends Document {
   updatedAt: Date;
 }
 
+/**
+ * Schema Mongoose para o modelo Task.
+ */
 const TaskSchema = new Schema<ITask>({
   title: { type: String, required: true },
   description: { type: String },
@@ -22,4 +29,8 @@ const TaskSchema = new Schema<ITask>({
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true }
 }, { timestamps: true });
 
+
+/**
+ * Model Mongoose para a tarefa.
+ */
 export const Task = mongoose.model<ITask>('Task', TaskSchema);
